@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Location Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+</head>
+<body>
+
+    <header>
+        <h1>IP-Based Laptop Location Tracker</h1>
+        <p>Estimate a laptop's location using its public IP address.</p>
+    </header>
+
+    <main>
+        <section class="tracker">
+            <h2>Locate an IP Address</h2>
+
+            <label for="ipAddress">Enter a public IP address:</label>
+            <input
+                type="text"
+                id="ipAddress"
+                placeholder="Example: 8.8.8.8"
+            >
+
+            <button id="locateButton">Locate IP Address</button>
+
+            <p id="message">
+                Enter an IP address to begin.
+            </p>
+
+            <div id="results">
+                <p><strong>IP Address:</strong> <span id="ip"></span></p>
+                <p><strong>Country:</strong> <span id="country"></span></p>
+                <p><strong>Region:</strong> <span id="region"></span></p>
+                <p><strong>City:</strong> <span id="city"></span></p>
+                <p><strong>Coordinates:</strong> <span id="coordinates"></span></p>
+            </div>
+
+            <div id="map"></div>
+
+            <p class="warning">
+                Location results are estimates and may not show the
+                laptop's exact physical position.
+            </p>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
